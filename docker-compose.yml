@@ -24,7 +24,7 @@ services:
     image: telegraf
     restart: always
     volumes:
-      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ${telegrafconf}:/etc/telegraf/telegraf.conf:ro
     depends_on:
       - mosquitto
       - influxdb
